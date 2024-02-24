@@ -2,12 +2,9 @@
 DataBase/bin/
 DataBase/obj/
 
-DataTransferObjects/bin/
-DataTransferObjects/obj/
-
-MVC/bin/
-MVC/obj/
-MVC/Migrations
+FrontEnd/bin/
+FrontEnd/obj/
+FrontEnd/Migrations
 
 Repositories/bin/
 Repositories/obj/
