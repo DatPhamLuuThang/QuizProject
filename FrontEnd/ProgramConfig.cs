@@ -1,4 +1,5 @@
-﻿using DataBase;
+﻿using BackEnd;
+using DataBase;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
@@ -74,6 +75,8 @@ public static class ProgramConfig
             options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
             options.IdleTimeout = TimeSpan.FromMinutes(20);
         });
+        
+        services.AddHttpClient();
     }
 
     /// <summary>
@@ -115,7 +118,7 @@ public static class ProgramConfig
                     ? DevelopmentConnection
                     : ProductionConnection,
                 optionsBuilder => optionsBuilder.MigrationsAssembly("FrontEnd"));
-            options.UseModel(QuizDbContextModel.Instance);
+                options.UseModel(QuizDbContextModel.Instance);
         });
     }
 

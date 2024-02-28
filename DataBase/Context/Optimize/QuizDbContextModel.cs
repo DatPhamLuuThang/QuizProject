@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 #pragma warning disable 219, 612, 618
 #nullable disable
 
-namespace FrontEnd
+namespace BackEnd
 {
     [DbContext(typeof(QuizDbContext))]
     public partial class QuizDbContextModel : RuntimeModel

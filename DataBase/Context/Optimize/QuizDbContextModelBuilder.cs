@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 #pragma warning disable 219, 612, 618
 #nullable disable
 
-namespace FrontEnd
+namespace BackEnd
 {
     public partial class QuizDbContextModel
     {

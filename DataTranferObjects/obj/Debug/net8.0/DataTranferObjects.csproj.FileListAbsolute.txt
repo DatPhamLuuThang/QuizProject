@@ -1,0 +1,12 @@
+D:\Github\QuizProject\DataTranferObjects\bin\Debug\net8.0\DataTranferObjects.deps.json
+D:\Github\QuizProject\DataTranferObjects\bin\Debug\net8.0\DataTranferObjects.dll
+D:\Github\QuizProject\DataTranferObjects\bin\Debug\net8.0\DataTranferObjects.pdb
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.AssemblyInfoInputs.cache
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.AssemblyInfo.cs
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.csproj.CoreCompileInputs.cache
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.sourcelink.json
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.dll
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\refint\DataTranferObjects.dll
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\DataTranferObjects.pdb
+D:\Github\QuizProject\DataTranferObjects\obj\Debug\net8.0\ref\DataTranferObjects.dll

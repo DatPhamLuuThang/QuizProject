@@ -1,0 +1,16 @@
+﻿@using DataTranferObjects.Response
+@using NuGet.Protocol
+@model UserInformationReponse
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thông tin User</title>
+</head>
+<body>
+<ul>
+    <li>User ID: @Model.UserId</li>
+    <li>User Role: @($"{Model.UserRole.ToJson()}")</li>
+</ul>
+</body>
+</html>

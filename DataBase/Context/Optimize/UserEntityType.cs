@@ -11,15 +11,15 @@ using Microsoft.EntityFrameworkCore.Storage;
 #pragma warning disable 219, 612, 618
 #nullable disable
 
-namespace FrontEnd
+namespace BackEnd
 {
-    internal partial class RoleEntityType
+    internal partial class UserEntityType
     {
         public static RuntimeEntityType Create(RuntimeModel model, RuntimeEntityType baseEntityType = null)
         {
             var runtimeEntityType = model.AddEntityType(
-                "DataBase.Models.Role",
-                typeof(Role),
+                "DataBase.Models.User",
+                typeof(User),
                 baseEntityType);
 
             var id = runtimeEntityType.AddProperty(
@@ -91,12 +91,12 @@ namespace FrontEnd
                     storeTypeName: "uniqueidentifier"));
             createdBy.AddAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.None);
 
-            var description = runtimeEntityType.AddProperty(
-                "Description",
+            var email = runtimeEntityType.AddProperty(
+                "Email",
                 typeof(string),
-                propertyInfo: typeof(Role).GetProperty("Description", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
-                fieldInfo: typeof(Role).GetField("<Description>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
-            description.TypeMapping = SqlServerStringTypeMapping.Default.Clone(
+                propertyInfo: typeof(User).GetProperty("Email", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
+                fieldInfo: typeof(User).GetField("<Email>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
+            email.TypeMapping = SqlServerStringTypeMapping.Default.Clone(
                 comparer: new ValueComparer<string>(
                     (string v1, string v2) => v1 == v2,
                     (string v) => v.GetHashCode(),
@@ -114,7 +114,7 @@ namespace FrontEnd
                     unicode: true,
                     dbType: System.Data.DbType.String),
                 storeTypePostfix: StoreTypePostfix.None);
-            description.AddAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.None);
+            email.AddAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.None);
 
             var isDeleted = runtimeEntityType.AddProperty(
                 "IsDeleted",
@@ -184,8 +184,8 @@ namespace FrontEnd
             var name = runtimeEntityType.AddProperty(
                 "Name",
                 typeof(string),
-                propertyInfo: typeof(Role).GetProperty("Name", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
-                fieldInfo: typeof(Role).GetField("<Name>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
+                propertyInfo: typeof(User).GetProperty("Name", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly),
+                fieldInfo: typeof(User).GetField("<Name>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly));
             name.TypeMapping = SqlServerStringTypeMapping.Default.Clone(
                 comparer: new ValueComparer<string>(
                     (string v1, string v2) => v1 == v2,
@@ -218,7 +218,7 @@ namespace FrontEnd
             runtimeEntityType.AddAnnotation("Relational:FunctionName", null);
             runtimeEntityType.AddAnnotation("Relational:Schema", null);
             runtimeEntityType.AddAnnotation("Relational:SqlQuery", null);
-            runtimeEntityType.AddAnnotation("Relational:TableName", "Role");
+            runtimeEntityType.AddAnnotation("Relational:TableName", "User");
             runtimeEntityType.AddAnnotation("Relational:ViewName", null);
             runtimeEntityType.AddAnnotation("Relational:ViewSchema", null);
 

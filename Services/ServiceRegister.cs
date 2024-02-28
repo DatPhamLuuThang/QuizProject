@@ -20,8 +20,8 @@ public static class ServiceRegister
     {
         var response = new List<ServiceRegisterModel>
         {
-            new ServiceRegisterModel(typeof(ICoreServices), typeof(CoreServices)),
-            //Thêm các service ở đây
+            new(typeof(ICoreServices), typeof(CoreServices)),
+            new(typeof(ITokenServices), typeof(TokenServices))
         };
 
         return response;

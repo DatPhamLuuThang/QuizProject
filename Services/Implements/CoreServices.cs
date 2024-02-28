@@ -24,6 +24,7 @@ public class CoreServices : ICoreServices
     public async Task<ResultResponse> AddAsync<TEntity>(TEntity data, Guid? userId = null) where TEntity : BaseEntity
     {
         ConfigBaseEntity(data,OperationStage.Create, userId);
+       
         await DbSet<TEntity>().AddAsync(data);
         return await SaveChangesAsync();
     }
